@@ -1,0 +1,15 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: app-cluster
+  region: eu-west-1
+  version: "1.18"
+
+managedNodeGroups:
+  - name: t3-nano
+    desiredCapacity: 2
+    minSize: 2
+    maxSize: 4
+    instanceType: t3.nano
+    volumeSize: 20
